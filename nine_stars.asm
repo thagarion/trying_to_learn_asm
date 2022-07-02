@@ -2,22 +2,22 @@ section .text
     global _start
 
 _start:
-    mov edx, len
+    mov eax, 4
+    mov ebx, 1
     mov ecx, msg
-    mov ebx, 1
-    mov eax, 4
+    mov edx, len
     int 0x80
 
-    mov edx, 9
+    mov eax, 4
+    mov ebx, 1
     mov ecx, stars
-    mov ebx, 1
-    mov eax, 4
+    mov edx, 9
     int 0x80
 
-    mov edx, 1
-    mov ecx, endl
-    mov ebx, 1
     mov eax, 4
+    mov ebx, 1
+    mov ecx, endl
+    mov edx, 1
     int 0x80
 
     mov eax, 1
