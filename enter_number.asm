@@ -26,6 +26,12 @@ _start:
     mov edx, 5
     int 80h
 
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, endl
+    mov edx, 1
+    int 0x80
+
     mov eax, 1
     mov ebx, 0
     int 80h
@@ -35,6 +41,7 @@ section .data
     ask_len equ $-ask
     answ db 'You have entered: '
     answ_len equ $-answ
+    endl db 0xa
 
 section .bss
-    num resb 5
+    num resb 1
